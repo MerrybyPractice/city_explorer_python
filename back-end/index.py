@@ -7,16 +7,6 @@ import requests
 
 load_dotenv()
 
-'''
-1. get/locations
-  - need to be able to process HTTP requests, send to API, parse and utilize data that is brought back. 
-  class: extend Base Http Request Handler 
-    do_GET(self)  
-   PATH PARSEING?  
-  Instead of   
-2. data parseing?  
-  - class  
-'''
 class SimpleHttpRequestHandler(BaseHTTPRequestHandler): 
   def do_GET(self): 
     parsed_path = urlparse(self.path)
