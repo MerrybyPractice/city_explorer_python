@@ -2,7 +2,6 @@
 import requests
 import os
 
-
 GEOCODE_API_KEY = os.environ.get('GEOCODE_API_KEY')
 
 class Location: 
