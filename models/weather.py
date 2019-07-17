@@ -1,2 +1,3 @@
-class Location: 
-  
+class Weather: 
+  def __init__(self):
+    pass

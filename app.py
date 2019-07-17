@@ -3,10 +3,11 @@ from flask import Flask, jsonify, request
 from urllib.parse import urlparse, parse_qs
 from pipenv.vendor.dotenv import load_dotenv
 from models.location import Location
-from models.weather import Weather
+#from models.weather import Weather
 import os
 import json
 import requests 
+
 
 load_dotenv()
 
@@ -15,13 +16,16 @@ app = Flask(__name__)
 @app.route('/location') 
 def find_locations_data(): 
   #need model 
-  #return jsonify([])
+  query = request.values['location']
+  location = Location(query)
+  print(location.data)
+  return jsonify(location.data)
 
 
 @app.route('/weather')
 def find_weathers_data(): 
   #need model
-  #return josonify([])
+  return jsonify([])
 
 
 #-------------------------------------------------
