@@ -10,7 +10,6 @@ class Location:
     self.saved_data = None
     self.query = query
   
-  @property
   def data(self):
     if not self.saved_data:
       self.saved_data = requests.get(f'https://maps.googleapis.com/maps/api/geocode/json?address={self.query}&key={GEOCODE_API_KEY}').json()
