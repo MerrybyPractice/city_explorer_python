@@ -2,6 +2,7 @@ from .flask_app import db
 
 class Locations(db.Model): 
 
+  __tablename__ = 'locations'
   id = db.Column(db.Integer, primary_key=True) 
   formatted_query = db.Column(db.String(256), unique=True)
   search_query = db.Column(db.String(500))

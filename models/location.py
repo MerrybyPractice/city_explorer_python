@@ -19,3 +19,16 @@ class Location:
       'longitude' : self.saved_data['results'][0]['geometry']['location']['lng']
     }
     return response
+
+  def seralize(self): 
+    return { 
+      'formatted_query' : self.formatted_query,
+      'search_query' : self.search_query, 
+      'latitude' : self.latitude, 
+      'longitude' : self.longitude
+    }
+
+  def seralize_query(self, query): 
+    return{
+      'search_query' : query
+    }
