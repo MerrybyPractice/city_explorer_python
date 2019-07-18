@@ -40,5 +40,5 @@ def find_weathers_data():
 
   return jsonify(weather.data())
 
-from models import Locations
-from models import Weathers
+from .models import Locations
+from .models import Weathers
